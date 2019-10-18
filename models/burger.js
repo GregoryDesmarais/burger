@@ -2,7 +2,9 @@ var orm = require("../config/orm");
 
 var burger = {
     all: function(cb) {
-        orm.selectAll()
+        orm.selectAll(function(data) {
+            cb(data);
+        })
     },
     addBurger: function() {
 
