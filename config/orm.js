@@ -9,17 +9,19 @@ var orm = {
         })
     },
     insertOne: function(table, name, cb) {
-        let queryString = `INSERT INTO ${table} VALUES (${name});`;
+        console.log(`Table: ${table}  ||  Burger Name: ${name}`)
+        let queryString = `INSERT INTO ${table} (burger_name) VALUES ('${name}');`;
         connection.query(queryString, function(err, data) {
             if (err) throw err;
-            cb(result);
+            cb(data);
         })
     },
-    updateOne: function(table, id) {
-        let queryString = `UPDATE ${table} VALUES (burger_name) WHERE id='${id}'`;
+    updateOne: function(table, id, cb) {
+        let queryString = `UPDATE ${table} SET devoured=1 WHERE id='${id}'`;
+        console.log(queryString)
         connection.query(queryString, function(err, data) {
             if (err) throw err;
-
+            cb(data);
         })
     }
 };
