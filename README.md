@@ -7,6 +7,7 @@ A simple full-stack application, deployed to Heroku, which utilizes a custom ORM
 ### Requirements
 
 - node.js
+- MYSQL database (local or remote)
 
 ### Node Packages Used
 
@@ -22,7 +23,7 @@ A simple full-stack application, deployed to Heroku, which utilizes a custom ORM
 	cd burger
 	npm install
 
-You will need to run the SQL database locally, using the schema and seed files to create and initally populate the database.
+You will need to run the SQL database locally, using the schema and seed files to create and initally populate the database.  Please update the connection information in config/connection.js to your SQL server's settings.
 
 ## Deployed Site
 [Heroku](https://whispering-escarpment-19131.herokuapp.com/)
